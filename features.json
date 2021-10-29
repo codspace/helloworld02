@@ -2,12 +2,12 @@
     "features": [
         {
             "id": "helloworld",
-            "name": "My First Feature",
+            "name": "My First Feature 2",
             "options": {
                 "greeting": {
                     "type": "string",
-                    "proposals": ["hey", "hello", "hi", "howdy" ],
-                    "default": "hey",
+                    "proposals": ["hey2", "hello2", "hi2", "howdy2" ],
+                    "default": "defaaault2",
                     "description": "Select a pre-made greeting, or enter your own"
                 }
             },
