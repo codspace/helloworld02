@@ -13,7 +13,7 @@ set +a
 # Build args are exposed to this entire feature set following the pattern:  _BUILD_ARG_<FEATURE ID>_<OPTION NAME>
 GREETING=${_BUILD_ARG_HELLOWORLD_GREETING:-undefined}
 
-tee /usr/hello.sh > /dev/null \
+tee /usr/hello2.sh > /dev/null \
 << EOF
 #!/bin/bash
 RED='\033[0;91m'
@@ -22,6 +22,6 @@ echo -e "\${RED}${GREETING}, \$(whoami)!"
 echo -e "\${NC}"
 EOF
 
-chmod +x /usr/hello.sh
-sudo cat '/usr/hello.sh' > /usr/local/bin/hello
-sudo chmod +x /usr/local/bin/hello
+chmod +x /usr/hello2.sh
+sudo cat '/usr/hello2.sh' > /usr/local/bin/hello2
+sudo chmod +x /usr/local/bin/hello2
