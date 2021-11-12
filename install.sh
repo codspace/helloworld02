@@ -18,7 +18,7 @@ tee /usr/hello2.sh > /dev/null \
 #!/bin/bash
 RED='\033[0;91m'
 NC='\033[0m' # No Color
-echo -e "\${RED}${GREETING}, \$(whoami)!"
+echo -e "\${RED}${GREETING}, \$(whoami)!!"
 echo -e "\${NC}"
 EOF
 
