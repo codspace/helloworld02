@@ -9,13 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      
-      - name: Get tag name
-        id: get_tag_name  
-        run: echo "::set-output name=tag::$(echo "${{ github.ref }}" | grep -oP 'refs/tags/\K(.+)')"
           
       - name: Devcontainer features
-        uses: joshspicer/devcontainer-features-action@main
+        uses: microsoft/publish-dev-container-features-action@main
         with:
           path-to-features: '.'
           
@@ -24,5 +20,5 @@ jobs:
         with:
           allowUpdates: true # Lets us upload our own artifact from previous step
           artifactErrorsFailBuild: true
-          artifacts: './features.tgz'
+          artifacts: './devcontainer-features.tgz'
           token: ${{ secrets.GITHUB_TOKEN }}
